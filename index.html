@@ -54,22 +54,37 @@ body{
         </body>
 
     </html>
+<p id="demo"></p>
 
     <script type = "text/javascript">
 
+    var site;
 
 function changeUrl() {
-    var site = "https://pinkphantoms.github.io/pinkphantom/";
-    document.getElementsByName('iFrameName')[0].src = site;
+
+    var txt = '{"name": "https://pinkphantoms.github.io/pinkphantom/"}'
+
+    var obj = JSON.parse(txt)
+    document.getElementById("demo").innerHTML = obj.name;
+
+
+    document.getElementsByName('iFrameName')[0].src = obj.name;
     setInterval(function(){ changeUrl(); }, 10000);
 
 }
 
     </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+
+
 $(document).ready(function() {
   $.getJSON("url.json", function(data) {
+     site = data;
+     console.log(site)
+
     console.log(data); // displays 'Quote # 2 text goes here'
   });
 });

@@ -1,14 +1,6 @@
 [
     {
-        "quoteText": "Quote # 1 text goes here",
-        "author": "Author #1"
+        "urlboi": "https://pinkphantoms.github.io/pinkphantom/"
     },
-    {
-        "quoteText": "Quote # 2 text goes here",
-        "author": "Author #2"
-    },
-    {
-        "quoteText": "Quote # 3 text goes here",
-        "author": "Author #3"
-    }
+
 ]
