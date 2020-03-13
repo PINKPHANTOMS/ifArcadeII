@@ -59,7 +59,10 @@ body{
 function changeUrl() {
     var site = "https://pinkphantoms.github.io/pinkphantom/";
     document.getElementsByName('iFrameName')[0].src = site;
+    setInterval(function(){ changeUrl(); }, 10000);
+
 }
+
 
 
     </script>
