@@ -62,13 +62,13 @@ body{
 
 function changeUrl() {
 
-    var txt = '{"name": "https://pinkphantoms.github.io/pinkphantom/"}'
+    var txt = '{"one": "https://pinkphantoms.github.io/pinkphantom/", "two":"https://pinkphantoms.github.io/IDS/"}'
 
     var obj = JSON.parse(txt)
-    document.getElementById("demo").innerHTML = obj.name;
+    document.getElementById("demo").innerHTML = obj.one;
 
 
-    document.getElementsByName('iFrameName')[0].src = obj.name;
+    document.getElementsByName('iFrameName')[0].src = obj.one;
     setInterval(function(){ changeUrl(); }, 10000);
 
 }
